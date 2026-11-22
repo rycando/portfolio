@@ -1,23 +1,23 @@
-/* Render Latin text one weight step above the corresponding Korean text. */
+/* Render Latin text two weight steps above the corresponding Korean text. */
 @font-face {
   font-family: "Montserrat";
   src: url("./assets/fonts/montserrat.woff2") format("woff2");
   font-weight: 300;
-  font-variation-settings: "wght" 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("./assets/fonts/montserrat.woff2") format("woff2");
-  font-weight: 400;
   font-variation-settings: "wght" 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("./assets/fonts/montserrat.woff2") format("woff2");
-  font-weight: 500;
+  font-weight: 400;
   font-variation-settings: "wght" 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat.woff2") format("woff2");
+  font-weight: 500;
+  font-variation-settings: "wght" 700;
   font-display: swap;
 }
 @font-face {
