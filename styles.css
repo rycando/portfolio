@@ -1,10 +1,22 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/montserrat.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("./assets/fonts/pretendard.woff2") format("woff2");
+  font-weight: 45 920;
+  font-display: swap;
+}
 :root {
   color-scheme: dark;
   --ink: #efe5dc;
   --muted: #beada1;
   --line: #695347;
   --accent: #ecb389;
-  font-family: "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: "Montserrat", "Pretendard", sans-serif;
   background: #100e0d;
   color: var(--ink);
 }
@@ -38,7 +50,7 @@ a:hover,summary:hover { color: var(--accent); }
 }
 .identity { position: sticky; top: 2rem; }
 h1 { font-size: clamp(3.1rem, 6.3vw, 7.2rem); font-weight: 300; letter-spacing: -.065em; line-height: .98; margin: 0; }
-h1 small { display: block; font: italic 1.125rem/1.5 Georgia,serif; letter-spacing: 0; margin-top: .45rem; color: var(--accent); }
+h1 small { display: block; font-size: 1.125rem; line-height: 1.5; letter-spacing: 0; margin-top: .45rem; color: var(--accent); }
 .role { margin: .45rem 0 0; color: var(--muted); font-size: .9rem; }
 nav { margin-top: 2.4rem; display: flex; flex-wrap: wrap; gap: 1.2rem; font-size: .95rem; }
 .intro-copy { max-width: 23rem; margin: clamp(4rem, 28vh, 18rem) 0 0; font-size: 1rem; line-height: 1.85; word-break: keep-all; color: var(--muted); }
