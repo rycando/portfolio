@@ -44,11 +44,46 @@ body::before {
   inset: -4%;
   z-index: -1;
   background: linear-gradient(90deg,transparent 25%,#100e0da6 74%), url("./assets/walnut.webp") center / cover;
-  animation: grain-drift 25s ease-in-out infinite alternate;
+
   pointer-events: none;
 }
-@keyframes grain-drift { to { transform: translate(1.8%, -1%) scale(1.025); } }
-@media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
+/* Light and grain travel independently so the rings keep their depth. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: -18%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 35% 59%, #bc805327, transparent 49%),
+              linear-gradient(155deg, transparent 30%, #0e0b0a66 53%, transparent 77%);
+}
+@keyframes grain-drift {
+  0%, 100% { transform: translate(-1%, 1%) rotate(-.6deg) scale(1.03); }
+  48% { transform: translate(2%, -1.4%) rotate(.8deg) scale(1.055); }
+  76% { transform: translate(.5%, -2%) rotate(.2deg) scale(1.045); }
+}
+@keyframes walnut-light {
+  from { transform: translate(-8%, 4%) rotate(-4deg); opacity: .48; }
+  to { transform: translate(11%, -6%) rotate(5deg); opacity: .95; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  body::before { animation: grain-drift 34s ease-in-out infinite; }
+  body::after { animation: walnut-light 13s ease-in-out infinite alternate; }
+  .project-scroll { scroll-behavior: smooth; }
+  .project::details-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows .55s cubic-bezier(.24,.7,.25,1),
+                opacity .4s ease, content-visibility .55s allow-discrete;
+  }
+  .project[open]::details-content { grid-template-rows: 1fr; opacity: 1; }
+  @supports (animation-timeline: view()) {
+    .project > summary { animation: arrive linear both; animation-timeline: view(); animation-range: entry 0% entry 95%; }
+    @keyframes arrive { from { opacity: .7; transform: translateY(.3rem); } to { opacity: 1; transform: none; } }
+  }
+}
+.project-body { min-height: 0; overflow: clip; }
 a { color: inherit; text-underline-offset: .3em; }
 a:hover,summary:hover { color: var(--accent); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
