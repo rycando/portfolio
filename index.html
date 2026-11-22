@@ -9,48 +9,16 @@
 </head>
 <body>
   <a class="skip" href="#main">본문 바로가기</a>
-  <header class="site-header">
-    <div class="container site-header-inner">
-      <a class="wordmark" href="./">rudyK<span>.</span></a>
-      <nav aria-label="주 메뉴">
-        <a href="#projects">프로젝트</a>
-        <a href="https://github.com/rycando">GitHub</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main" class="container">
-    <section class="intro" aria-labelledby="name">
-      <div>
-        <p class="profession" lang="en">Software Engineer</p>
-        <h1 id="name" lang="en">rudyK <small>(RyunYeong Kim)</small></h1>
-        <p class="intro-copy">TypeScript 백엔드 개발 경험을 바탕으로 학생창업을 하며 AI 제품을 만들고 있습니다. 고객이 겪는 문제를 정의하고 기존 업무 흐름을 개선하는 데 관심이 있습니다.</p>
-      <a class="download" href="./assets/resume.pdf" download="김륜영 이력서 2026.06.pdf">
-        <span>이력서 다운로드</span>
-        <span class="file-type">PDF</span>
-      </a>
-      </div>
-      <div class="wood-study" aria-hidden="true"></div>
-    </section>
-
-    <section id="projects" class="projects" aria-labelledby="projects-title">
-      <div class="project-heading">
-        <h2 id="projects-title">프로젝트</h2>
-        <nav aria-label="프로젝트 바로가기" class="project-index">
-          <a href="#gridi">gridi</a>
-          <a href="#moti">moti</a>
-          <a href="#chiptable">ChipTable</a>
-          <a href="#paperworks">Paperworks</a>
-          <a href="#fortunar">Fortunar</a>
-          <a href="#hancom-mcp">hancom-mcp</a>
-        </nav>
-      </div>
-      <div class="project-list">
-        <article class="project" id="gridi">
-          <div class="project-mark gridi-mark"><img src="./assets/gridi.png" alt="" width="677" height="366"></div>
-          <div class="project-content">
-            <h3 lang="en">gridi</h3>
-            <p class="project-summary">운영 화면과 Figma, GitHub를 잇는 AI 워크스페이스</p>
+  <main id="main" class="studio">
+    <header class="identity">
+      <h1 lang="en">rudyK <small>(RyunYeong Kim)</small></h1>
+      <p class="role" lang="en">Software Engineer</p>
+      <nav aria-label="개인 링크"><a href="./assets/resume.pdf" download="김륜영 이력서 2026.06.pdf">이력서 PDF</a><a href="https://github.com/rycando">GitHub</a><a href="https://rycando.tistory.com/">블로그</a></nav>
+      <p class="intro-copy">TypeScript 백엔드 개발 경험을 바탕으로 학생창업을 하며 AI 제품을 만들고 있습니다. 고객이 겪는 문제를 정의하고 기존 업무 흐름을 개선하는 데 관심이 있습니다.</p>
+    </header>
+    <section id="projects" aria-labelledby="project-title">
+      <h2 id="project-title">프로젝트</h2>
+        <details class="project" id="gridi" name="project"><summary><span lang="en">gridi</span><span class="subtitle">운영 화면과 Figma, GitHub를 잇는 AI 워크스페이스</span></summary>
             <dl>
               <div><dt>문제</dt><dd>Notion에서 기획을 바꿔도 Jira 티켓과 Figma 디자인, 코드에는 변경이 바로 반영되지 않습니다. 결정 배경도 도구마다 흩어져 있어 팀원이 변경이 어디까지 영향을 주는지 확인하거나 AI에 프로젝트 맥락을 다시 설명하는 데 시간이 듭니다.</dd></div>
               <div><dt>역할</dt><dd>창업자로 제품을 만들었습니다. Figma 플러그인에서 디자인 변경을 GitHub로 보내는 Design Sync와 Figma 내보내기 기능을 개발했습니다.</dd></div>
@@ -61,28 +29,20 @@
               <li><a href="https://gridi.ai/ko">제품 소개</a></li>
               <li><a href="https://app.gridi.ai/projects">워크스페이스</a></li>
             </ul>
-          </div>
-        </article>
 
-        <article class="project" id="moti">
-          <div class="project-mark moti-mark"><img src="./assets/moti.png" alt="" width="600" height="652"></div>
-          <div class="project-content">
-            <h3 lang="en">moti</h3>
-            <p class="project-summary">개발팀을 위한 AI 성과 평가 도구</p>
+        </details>
+
+        <details class="project" id="moti" name="project"><summary><span lang="en">moti</span><span class="subtitle">개발팀을 위한 AI 성과 평가 도구</span></summary>
             <dl>
               <div><dt>문제</dt><dd>분기나 연말마다 개발자는 GitHub 커밋, Jira 이슈, Notion 문서를 찾아 성과 리포트에 일일이 붙여야 합니다. 평가자도 첨부 링크를 하나씩 열어 근거를 확인합니다.</dd></div>
               <div><dt>역할</dt><dd>GitHub 연동, 성과 리포트와 평가 기능의 백엔드, 랜딩 페이지를 개발했습니다.</dd></div>
               <div><dt>기술</dt><dd>NestJS · TypeORM · OpenAI API · Next.js</dd></div>
               <div><dt>결과</dt><dd>협업툴을 연동해 성과를 작성할 수 있는 MVP를 완성했습니다. AI가 근거를 수집하고 평가 참고자료도 만듭니다. 사업계획서에 따르면 성과 작성에 기존 방식으로는 평균 6분 11초, moti로는 1분 58초가 걸렸습니다.</dd></div>
             </dl>
-          </div>
-        </article>
 
-        <article class="project" id="chiptable">
-          <div class="project-mark chiptable-mark"><img src="./assets/chiptable.png" alt="" width="512" height="512"></div>
-          <div class="project-content">
-            <h3 lang="en">ChipTable</h3>
-            <p class="project-summary">홀덤 테이블을 위한 가상 칩 보드</p>
+        </details>
+
+        <details class="project" id="chiptable" name="project"><summary><span lang="en">ChipTable</span><span class="subtitle">홀덤 테이블을 위한 가상 칩 보드</span></summary>
             <dl>
               <div><dt>문제</dt><dd>실물 카드로 홀덤을 할 때 칩 잔액, 베팅 순서, 올인 이후의 사이드 팟을 손으로 관리해야 합니다.</dd></div>
               <div><dt>역할</dt><dd>홀덤 베팅 규칙 엔진과 웹 MVP를 개발하고 모바일에 방 초대용 QR 기능을 구현했습니다.</dd></div>
@@ -94,27 +54,19 @@
               <li><a href="https://apps.apple.com/us/app/chiptable-poker-chip-board/id6788589286">App Store</a></li>
               <li><a href="https://play.google.com/store/apps/details?id=ai.gridi.chiptable">Google Play</a></li>
             </ul>
-          </div>
-        </article>
-        <article class="project" id="paperworks">
-          <div class="project-mark paperworks-mark"><img src="./assets/paperworks.png" alt="" width="128" height="128"></div>
-          <div class="project-content">
-            <h3 lang="en">Paperworks</h3>
-            <p class="project-summary">참가자 증빙서류 검수와 Excel 정산</p>
+
+        </details>
+        <details class="project" id="paperworks" name="project"><summary><span lang="en">Paperworks</span><span class="subtitle">참가자 증빙서류 검수와 Excel 정산</span></summary>
             <dl>
               <div><dt>문제</dt><dd>지원사업이나 행사 운영자는 참가자 서류를 일일이 열어 누락과 유효성을 확인하고 지급명단을 작성해야 합니다.</dd></div>
               <div><dt>역할</dt><dd>검수 결과를 표에서 조회·편집하는 화면과 Excel 내보내기 기능을 개발했습니다.</dd></div>
               <div><dt>기술</dt><dd>React · NestJS · BullMQ · PostgreSQL · ExcelJS</dd></div>
               <div><dt>결과</dt><dd>서류 분류, 누락 검출, 유효성 확인, 정보 추출을 자동화하고 검수 결과를 Excel 지급명단으로 내보내는 웹 도구를 구현했습니다.</dd></div>
             </dl>
-          </div>
-        </article>
 
-        <article class="project" id="fortunar">
-          <div class="project-mark fortunar-mark"><img src="./assets/fortunar.png" alt="" width="180" height="180"></div>
-          <div class="project-content">
-            <h3 lang="en">Fortunar</h3>
-            <p class="project-summary">자미두수 명반을 만들어 복사하는 웹 도구</p>
+        </details>
+
+        <details class="project" id="fortunar" name="project"><summary><span lang="en">Fortunar</span><span class="subtitle">자미두수 명반을 만들어 복사하는 웹 도구</span></summary>
             <dl>
               <div><dt>문제</dt><dd>자미두수 명반을 계산한 뒤 외부 AI에 해석을 요청하려면 명반과 요청문을 따로 옮겨야 합니다.</dd></div>
               <div><dt>역할</dt><dd>자미두수 명반을 계산해 보여주는 웹 화면을 개발하고 배포했습니다.</dd></div>
@@ -124,14 +76,10 @@
             <ul class="project-links" aria-label="Fortunar 링크">
               <li><a href="https://fortunar.ai/">웹 도구</a></li>
             </ul>
-          </div>
-        </article>
 
-        <article class="project" id="hancom-mcp">
-          <div class="project-mark hancom-mark" aria-hidden="true">HWP</div>
-          <div class="project-content">
-            <h3 lang="en">hancom-mcp</h3>
-            <p class="project-summary">한글 문서를 읽고 편집하는 오픈소스 MCP 서버</p>
+        </details>
+
+        <details class="project" id="hancom-mcp" name="project"><summary><span lang="en">hancom-mcp</span><span class="subtitle">한글 문서를 읽고 편집하는 오픈소스 MCP 서버</span></summary>
             <dl>
               <div><dt>문제</dt><dd>AI 도구에서 만든 내용을 한글 문서에 반영하려면 사람이 문서를 열어 옮겨야 했습니다.</dd></div>
               <div><dt>역할</dt><dd>HWPX 문서에 이미지를 삽입하는 기능과 HWP 변환 후 문단 ID를 정리하는 기능을 개발했습니다.</dd></div>
@@ -141,17 +89,10 @@
             <ul class="project-links" aria-label="hancom-mcp 링크">
               <li><a href="https://github.com/gridi-ai/hancom-mcp">소스 코드</a></li>
             </ul>
-          </div>
-        </article>
-      </div>
+
+        </details>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>rudyK (RyunYeong Kim)</span>
-      <a href="https://rycando.tistory.com/">블로그</a>
-    </div>
-  </footer>
+  <script src="./navigation.js" defer></script>
 </body>
 </html>
