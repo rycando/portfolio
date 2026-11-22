@@ -74,8 +74,8 @@ body::after {
     display: grid;
     grid-template-rows: 0fr;
     opacity: 0;
-    transition: grid-template-rows .55s cubic-bezier(.24,.7,.25,1),
-                opacity .4s ease, content-visibility .55s allow-discrete;
+    transition: grid-template-rows 1s cubic-bezier(.35,.05,.24,1),
+                opacity .75s ease, content-visibility 1s allow-discrete;
   }
   .project[open]::details-content { grid-template-rows: 1fr; opacity: 1; }
   @supports (animation-timeline: view()) {
