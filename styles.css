@@ -120,7 +120,7 @@ nav { margin-top: 2.4rem; display: flex; flex-wrap: wrap; gap: 1.2rem; font-size
   overflow: hidden auto;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
-  padding: 4px 1rem 4px 5px;
+  padding: 4px 1rem 4px 0;
 }
 .project-scroll:focus-visible { outline-offset: -2px; }
 .identity, .project-scroll { scrollbar-width: thin; scrollbar-color: #937460 #231d19; }
@@ -137,7 +137,13 @@ summary { position: relative; display: block; padding: .9rem 1.8rem .95rem 0; cu
 summary::-webkit-details-marker { display: none; }
 summary::after { content: "+"; position: absolute; right: .15rem; top: 1.2rem; color: var(--accent); font-size: 1.1rem; }
 details[open] summary::after { content: "−"; }
-summary span:first-child { font-size: clamp(2.1rem, 3.7vw, 4.4rem); letter-spacing: -.045em; font-weight: 300; line-height: 1.05; }
+/* First-glyph side bearings measured in Montserrat at the title weight. */
+#gridi { --title-bearing: .042em; }
+#moti, #hancom-mcp { --title-bearing: .091em; }
+#chiptable { --title-bearing: .048em; }
+#paperworks, #fortunar { --title-bearing: .105em; }
+summary:focus-visible { outline-offset: -2px; }
+summary span:first-child { position: relative; left: calc(-1 * var(--title-bearing, 0em)); font-size: clamp(2.1rem, 3.7vw, 4.4rem); letter-spacing: -.045em; font-weight: 300; line-height: 1.05; }
 .subtitle { display: block; color: var(--muted); font-size: .9rem; line-height: 1.55; margin-top: .35rem; }
 dl { margin: .3rem 0 1.5rem; }
 dl div { display: grid; grid-template-columns: 2.5rem 1fr; gap: .6rem; margin: .65rem 0; line-height: 1.7; }
