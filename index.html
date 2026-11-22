@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="소프트웨어 엔지니어 김륜영의 프로젝트와 이력서">
+  <title>김륜영 · 포트폴리오</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="wordmark" href="./">rycando<span>.</span></a>
+      <nav aria-label="주 메뉴">
+        <a href="#projects">프로젝트</a>
+        <a href="https://github.com/rycando">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="intro" aria-labelledby="name">
+      <div>
+        <p class="profession" lang="en">Software Engineer</p>
+        <h1 id="name">김륜영</h1>
+        <p class="intro-copy">TypeScript 백엔드 개발 경험을 바탕으로 학생창업을 하며 AI 제품을 만들고 있습니다. 고객이 겪는 문제를 정의하고 기존 업무 흐름을 개선하는 데 관심이 있습니다.</p>
+      </div>
+      <a class="download" href="./assets/resume.pdf" download="김륜영 이력서 2026.06.pdf">
+        <span>이력서 다운로드</span>
+        <span class="file-type">PDF</span>
+      </a>
+    </section>
+
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="project-heading">
+        <h2 id="projects-title">프로젝트</h2>
+        <nav aria-label="프로젝트 바로가기" class="project-index">
+          <a href="#gridi">gridi</a>
+          <a href="#moti">Moti</a>
+          <a href="#chiptable">ChipTable</a>
+          <a href="#paperworks">Paperworks</a>
+          <a href="#fortunar">Fortunar</a>
+          <a href="#hancom-mcp">hancom-mcp</a>
+        </nav>
+      </div>
+      <div class="project-list">
+        <article class="project" id="gridi">
+          <div class="project-mark gridi-mark"><img src="./assets/gridi.png" alt="" width="677" height="366"></div>
+          <div class="project-content">
+            <h3 lang="en">gridi</h3>
+            <p class="project-summary">운영 화면과 Figma, GitHub를 잇는 AI 워크스페이스</p>
+            <dl>
+              <div><dt>문제</dt><dd>운영 중인 UI를 Figma에 다시 그리고 디자인 변경 사항을 코드에 반영하는 일을 따로 해야 합니다.</dd></div>
+              <div><dt>역할</dt><dd>창업자로 제품을 만들었습니다. Figma 플러그인에서 디자인 변경을 GitHub로 보내는 Design Sync와 Figma 내보내기 기능을 개발했습니다.</dd></div>
+              <div><dt>기술</dt><dd>Next.js · React · NestJS · Figma Plugin API</dd></div>
+              <div><dt>결과</dt><dd>워크스페이스에서 웹 UI를 탐색해 편집 가능한 디자인으로 Figma에 내보냅니다. Design Sync는 디자인 변경을 GitHub 코드 수정안과 PR로 연결합니다.</dd></div>
+            </dl>
+            <ul class="project-links" aria-label="gridi 링크">
+              <li><a href="https://gridi.ai/ko">제품 소개</a></li>
+              <li><a href="https://app.gridi.ai/projects">워크스페이스</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project" id="moti">
+          <div class="project-mark moti-mark"><img src="./assets/moti.png" alt="" width="600" height="652"></div>
+          <div class="project-content">
+            <h3 lang="en">Moti</h3>
+            <p class="project-summary">개발팀을 위한 AI 성과 평가 도구</p>
+            <dl>
+              <div><dt>문제</dt><dd>GitHub, Jira, Notion에 흩어진 업무 기록을 모아 개발팀의 성과를 파악하기 어렵습니다.</dd></div>
+              <div><dt>역할</dt><dd>GitHub 연동, 성과 리포트와 평가 기능의 백엔드, 랜딩 페이지를 개발했습니다.</dd></div>
+              <div><dt>기술</dt><dd>NestJS · TypeORM · OpenAI API · Next.js</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="project" id="chiptable">
+          <div class="project-mark chiptable-mark"><img src="./assets/chiptable.png" alt="" width="512" height="512"></div>
+          <div class="project-content">
+            <h3 lang="en">ChipTable</h3>
+            <p class="project-summary">홀덤 테이블을 위한 가상 칩 보드</p>
+            <dl>
+              <div><dt>문제</dt><dd>실물 카드로 홀덤을 할 때 칩 잔액, 베팅 순서, 올인 이후의 사이드 팟을 손으로 관리해야 합니다.</dd></div>
+              <div><dt>역할</dt><dd>홀덤 베팅 규칙 엔진과 웹 MVP를 개발하고 모바일에 방 초대용 QR 기능을 구현했습니다.</dd></div>
+              <div><dt>기술</dt><dd>TypeScript · Next.js · Expo</dd></div>
+              <div><dt>결과</dt><dd>턴 진행과 사이드 팟 계산을 자동화한 가상 칩 보드를 웹과 앱으로 출시했습니다.</dd></div>
+            </dl>
+            <ul class="project-links" aria-label="ChipTable 링크">
+              <li><a href="https://001-chiptable-web.vercel.app/en">웹 데모</a></li>
+              <li><a href="https://apps.apple.com/us/app/chiptable-poker-chip-board/id6788589286">App Store</a></li>
+              <li><a href="https://play.google.com/store/apps/details?id=ai.gridi.chiptable">Google Play</a></li>
+            </ul>
+          </div>
+        </article>
+        <article class="project" id="paperworks">
+          <div class="project-mark paperworks-mark"><img src="./assets/paperworks.png" alt="" width="128" height="128"></div>
+          <div class="project-content">
+            <h3 lang="en">Paperworks</h3>
+            <p class="project-summary">참가자 증빙서류 검수와 Excel 정산</p>
+            <dl>
+              <div><dt>문제</dt><dd>지원사업이나 행사 운영자는 참가자 서류를 일일이 열어 누락과 유효성을 확인하고 지급명단을 작성해야 합니다.</dd></div>
+              <div><dt>역할</dt><dd>검수 결과를 표에서 조회·편집하는 화면과 Excel 내보내기 기능을 개발했습니다.</dd></div>
+              <div><dt>기술</dt><dd>React · NestJS · BullMQ · PostgreSQL · ExcelJS</dd></div>
+              <div><dt>결과</dt><dd>서류 분류, 누락 검출, 유효성 확인, 정보 추출을 자동화하고 검수 결과를 Excel 지급명단으로 내보내는 웹 도구를 구현했습니다.</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="project" id="fortunar">
+          <div class="project-mark fortunar-mark"><img src="./assets/fortunar.png" alt="" width="180" height="180"></div>
+          <div class="project-content">
+            <h3 lang="en">Fortunar</h3>
+            <p class="project-summary">자미두수 명반을 만들어 복사하는 웹 도구</p>
+            <dl>
+              <div><dt>문제</dt><dd>자미두수 명반을 계산한 뒤 외부 AI에 해석을 요청하려면 명반과 요청문을 따로 옮겨야 합니다.</dd></div>
+              <div><dt>역할</dt><dd>자미두수 명반을 계산해 보여주는 웹 화면을 개발하고 배포했습니다.</dd></div>
+              <div><dt>기술</dt><dd>Next.js · React · TypeScript · Canvas · Clipboard API</dd></div>
+              <div><dt>결과</dt><dd>출생 정보와 도시를 입력하면 자미두수 명반이 나옵니다. 명반과 해석 요청문을 한 장의 이미지로 복사해 외부 AI 대화창에 붙여넣을 수 있습니다.</dd></div>
+            </dl>
+            <ul class="project-links" aria-label="Fortunar 링크">
+              <li><a href="https://fortunar.ai/">웹 도구</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project" id="hancom-mcp">
+          <div class="project-mark hancom-mark" aria-hidden="true">HWP</div>
+          <div class="project-content">
+            <h3 lang="en">hancom-mcp</h3>
+            <p class="project-summary">한글 문서를 읽고 편집하는 오픈소스 MCP 서버</p>
+            <dl>
+              <div><dt>문제</dt><dd>AI 도구에서 만든 내용을 한글 문서에 반영하려면 사람이 문서를 열어 옮겨야 했습니다.</dd></div>
+              <div><dt>역할</dt><dd>HWPX 문서에 이미지를 삽입하는 기능과 HWP 변환 후 문단 ID를 정리하는 기능을 개발했습니다.</dd></div>
+              <div><dt>기술</dt><dd>Python · MCP · lxml · Java</dd></div>
+              <div><dt>결과</dt><dd>HWP를 HWPX로 변환하고 문서의 단락과 표를 조회하거나 수정할 수 있는 MCP 서버를 공개했습니다.</dd></div>
+            </dl>
+            <ul class="project-links" aria-label="hancom-mcp 링크">
+              <li><a href="https://github.com/gridi-ai/hancom-mcp">소스 코드</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>김륜영 · rycando</span>
+      <a href="https://rycando.tistory.com/">블로그</a>
+    </div>
+  </footer>
+</body>
+</html>
